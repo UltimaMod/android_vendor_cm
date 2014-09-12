@@ -345,6 +345,19 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 -include vendor/cyngn/product.mk
 
-# UltimaMod Overlays
-$(call inherit-product, vendor/ultimamod/configs/common.mk)
-$(call inherit-product, vendor/ultimamod/configs/common_phone.mk)
+# Common UltimaAOSP overlay
+PRODUCT_PACKAGE_OVERLAYS += vendor/ultimamod/overlay/common
+
+# Mount/unmount system support
+PRODUCT_COPY_FILES += \
+    vendor/ultimamod/prebuilt/common/bin/sysrw:system/bin/sysrw \
+    vendor/ultimamod/prebuilt/common/bin/sysro:system/bin/sysro
+
+# Required UltimaAOSP Packages
+PRODUCT_PACKAGES += \
+    UltimaWallpapers 
+
+# Live wallpapers
+PRODUCT_PACKAGES += \
+    SunBeam
+
