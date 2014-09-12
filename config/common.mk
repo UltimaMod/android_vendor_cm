@@ -344,3 +344,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 -include $(WORKSPACE)/build_env/image-auto-bits.mk
 
 -include vendor/cyngn/product.mk
+
+# UltimaMod Overlays
+$(call inherit-product, vendor/ultimamod/configs/common.mk)
+$(call inherit-product, vendor/ultimamod/configs/common_phone.mk)
