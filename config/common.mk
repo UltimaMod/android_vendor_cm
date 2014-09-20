@@ -353,7 +353,8 @@ PRODUCT_COPY_FILES += \
 
 # Required UltimaAOSP Packages
 PRODUCT_PACKAGES += \
-    UltimaWallpapers 
+    UltimaWallpapers \
+    OTAUpdates
 
 # Live wallpapers
 PRODUCT_PACKAGES += \
